@@ -41,6 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+//title change
+const tich = document.querySelector("title")
+tich.textContent = "Great Idea!"
+
 //Nav Links
 const navi = document.querySelectorAll(".container nav a");
 const navi_links = Array.from(navi);
@@ -59,5 +63,13 @@ bot.textContent = siteContent.cta.button;
 
 //image
 const image = cita.querySelector("img");
-image.src = siteContent.cta["img-src"]
+image.src = siteContent.cta["img-src"];
 
+//top content
+const top_con = document.querySelector(".top-content");
+const first_h4 = top_con.querySelector("h4:nth-of-type(1)");
+const sec_h4 = top_con.querySelector("h4:last-child");
+const first_con = top_con.querySelector("p:nth-of-type(1)");
+first_h4.textContent = siteContent["main-content"]["features-h4"];
+first_con.textContent = siteContent["main-content"]["features-content"];
+sec_h4.textContent = siteContent["main-content"]["about-h4"];
