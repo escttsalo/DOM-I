@@ -46,12 +46,20 @@ const tich = document.querySelector("title")
 tich.textContent = "Great Idea!"
 
 //Nav Links
-const navi = document.querySelectorAll(".container nav a");
-navi.forEach((lonk, i) => {lonk.textContent = siteContent.nav[`nav-item-${i+1}`]})
-// const navi_links = Array.from(navi);
-// for (let i=0; i < navi_links.length; i++){
-//   navi_links[i].textContent = siteContent.nav[`nav-item-${i+1}`]
-// };
+const navLinks = document.querySelectorAll(".container nav a");
+navLinks.forEach((lonk, i) => {lonk.textContent = siteContent.nav[`nav-item-${i+1}`]})
+
+//Add new links
+const navi = document.querySelector("nav")
+let homeLink = document.createElement("a");
+homeLink.href ="#";
+homeLink.textContent = 'Home';
+navi.prepend(homeLink);
+
+let shopLink = document.createElement("a");
+shopLink.href = "#";
+shopLink.textContent = 'Shop';
+navi.appendChild(shopLink)
 
 //cta h1
 const cita = document.querySelector(".cta");
@@ -87,13 +95,13 @@ tex_con[4].getElementsByTagName("h4")[0].textContent = siteContent["main-content
 tex_con[4].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["vision-content"];
 
 //contact
-const cont = document.querySelector(".contact")
-const p_list = cont.querySelectorAll("p")
-cont.querySelector("h4").textContent = siteContent.contact["contact-h4"]
-p_list[0].textContent = siteContent.contact.address
-p_list[1].textContent = siteContent.contact.phone
-p_list[2].textContent = siteContent.contact.email
+const cont = document.querySelector(".contact");
+const p_list = cont.querySelectorAll("p");
+cont.querySelector("h4").textContent = siteContent.contact["contact-h4"];
+p_list[0].textContent = siteContent.contact.address;
+p_list[1].textContent = siteContent.contact.phone;
+p_list[2].textContent = siteContent.contact.email;
 
 //footer
-const foot = document.querySelector("footer p")
-foot.textContent = siteContent.footer.copyright
+const foot = document.querySelector("footer p");
+foot.textContent = siteContent.footer.copyright;
