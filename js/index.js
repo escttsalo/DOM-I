@@ -84,3 +84,13 @@ tex_con[3].getElementsByTagName("h4")[0].textContent = siteContent["main-content
 tex_con[3].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["product-content"];
 tex_con[4].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["vision-h4"];
 tex_con[4].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+const cont = document.querySelector(".contact")
+const p_list = cont.querySelectorAll("p")
+cont.querySelector("h4").textContent = siteContent.contact["contact-h4"]
+p_list[0].textContent = siteContent.contact.address
+p_list[1].textContent = siteContent.contact.phone
+p_list[2].textContent = siteContent.contact.email
+
+//footer
