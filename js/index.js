@@ -47,10 +47,11 @@ tich.textContent = "Great Idea!"
 
 //Nav Links
 const navi = document.querySelectorAll(".container nav a");
-const navi_links = Array.from(navi);
-for (let i=0; i < navi_links.length; i++){
-  navi_links[i].textContent = siteContent.nav[`nav-item-${i+1}`]
-};
+navi.forEach((lonk, i) => {lonk.textContent = siteContent.nav[`nav-item-${i+1}`]})
+// const navi_links = Array.from(navi);
+// for (let i=0; i < navi_links.length; i++){
+//   navi_links[i].textContent = siteContent.nav[`nav-item-${i+1}`]
+// };
 
 //cta h1
 const cita = document.querySelector(".cta");
@@ -96,4 +97,3 @@ p_list[2].textContent = siteContent.contact.email
 //footer
 const foot = document.querySelector("footer p")
 foot.textContent = siteContent.footer.copyright
-
