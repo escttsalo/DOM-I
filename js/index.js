@@ -66,10 +66,14 @@ const image = cita.querySelector("img");
 image.src = siteContent.cta["img-src"];
 
 //top content
-const top_con = document.querySelector(".top-content");
-const first_h4 = top_con.querySelector("h4:nth-of-type(1)");
-const sec_h4 = top_con.querySelector("h4:last-child");
-const first_con = top_con.querySelector("p:nth-of-type(1)");
-first_h4.textContent = siteContent["main-content"]["features-h4"];
-first_con.textContent = siteContent["main-content"]["features-content"];
-sec_h4.textContent = siteContent["main-content"]["about-h4"];
+const top_con = document.querySelectorAll(".text-content");
+top_con[0].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["features-h4"]
+top_con[0].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["features-content"]
+top_con[1].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["about-h4"]
+top_con[1].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["about-content"]
+// const first_h4 = top_con.querySelector("h4:nth-of-type(1)");
+// const sec_h4 = top_con.querySelector("h4:last-child");
+// const first_con = top_con.querySelector("p:nth-of-type(1)");
+// first_h4.textContent = siteContent["main-content"]["features-h4"];
+// first_con.textContent = siteContent["main-content"]["features-content"];
+// sec_h4.textContent = siteContent["main-content"]["about-h4"];
