@@ -94,3 +94,6 @@ p_list[1].textContent = siteContent.contact.phone
 p_list[2].textContent = siteContent.contact.email
 
 //footer
+const foot = document.querySelector("footer p")
+foot.textContent = siteContent.footer.copyright
+
